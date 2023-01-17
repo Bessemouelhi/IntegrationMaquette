@@ -190,11 +190,12 @@ header p{
     margin-bottom: 20px;
 }
 
-.aboutus button{
+.aboutus button, .contactus button{
     padding: 5px 10px;
     border-radius: 20px;
     background-color: #3dc1cd;
     color: white;
+    border: none;
 }
 
 /********************************************************************************************/
@@ -280,4 +281,21 @@ header p{
 }
 .blog .text h3{
     color: #3dc1cd;
+}
+
+/**************************************************************************************/
+
+.contactus{
+    background-color: grey;
+    height: 300px;
+    text-align: center;
+    color: white;
+    padding-top: 5%;
+}
+.contactus div{
+    width: 50%;
+    margin: auto;
+}
+.contactus p, .contactus h2{
+    padding: 2%;
 }
