@@ -8,18 +8,15 @@
 body{
     height: 500vh;
 }
-
 header{
     background: url("img/banner_bg.jpg");
     height: 540px;
     background-size: cover;
     padding: 3em 0;
 }
-
 a{
     text-decoration: none;
 }
-
 p{
     font-size: small;
 }
@@ -152,6 +149,8 @@ header p{
 .startbtn{
     margin-top: 50px;
     padding: 10px 30px;
+    border-radius: 20px;
+    border-style: none;
 }
 
 /***************************************************************************/
@@ -174,6 +173,7 @@ header p{
 }
 
 .icon{
+    border: 3px solid white;
     border-radius: 50%;
     width: 80px;
     height: 80px;
@@ -191,6 +191,9 @@ header p{
     background-color: whitesmoke;
     color: black;
 }
+.mdi{
+    font-size: 48px;
+}
 
 .aboutus p{
     margin-top: 20px;
@@ -198,7 +201,7 @@ header p{
 }
 
 .aboutus button, .contactus button{
-    padding: 5px 10px;
+    padding: 10px 15px;
     border-radius: 20px;
     background-color: #3dc1cd;
     color: white;
@@ -213,15 +216,26 @@ header p{
     background-color: #3dc1cd;
     /* max-width: 30%; */
     float: left;
-    width: 50%;
-    padding: 8%;
-    text-align: center;
+    width: 60%;
+    padding: 4%;
+    color: white;
+}
+.gallery{
+    width: 80%;
+}
+.portfolio span{
+    color: #f69536;
 }
 .portfolio img{
     max-width: 100%;
 }
-.portfolio * {
-    padding: 10px;
+.portfolio  p{
+    border-top: 2px solid #fafafa;
+}
+.portfolio  li, .portfolio  p, .portfolio h3 {
+    margin: 10px;
+    padding-top: 10px;
+    list-style: none;
 }
 
 /************************************************************************************************/
@@ -253,21 +267,28 @@ header p{
 }
 .blog aside{
     background-color: rgba(0,0,0, 0.7);
-    width: 40%;
     color: white;
     height: 100%;
-    padding: 5%;
+    padding: 2%;
+}
+aside h3, aside hr, aside ul{
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+aside ul{
+    margin-top: 50px;
 }
 .blog .left{
-    margin-left: 15%;
+    margin-left: 25%;
+    width: 60%;
 }
 .blog ul li{
     background-color: whitesmoke;
     margin: 15px 0;
     padding: 10px;
     color: black;
-    width: 60%;
     text-align: center;
+    list-style: none;
 }
 .blog .content{
     margin-top: 2%;
@@ -300,7 +321,7 @@ header p{
     padding-top: 5%;
 }
 .contactus div{
-    width: 50%;
+    width: 30%;
     margin: auto;
 }
 .contactus p, .contactus h2{
@@ -314,9 +335,6 @@ header p{
 /************************************************************************************/
 
 @media screen and (max-width: 600px){
-    footer{
-        display: block;
-    }
 }
 footer{
     background-color: #383b3c;
@@ -351,5 +369,5 @@ footer .title{
     padding-bottom: 20px;
 }
 .location, .moreinfo, .getsocial{
-    height: 70%;
+    height: 60%;
 }
