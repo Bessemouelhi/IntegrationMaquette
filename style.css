@@ -81,6 +81,8 @@ header p{
     width: 65%;
     line-height: 150%;
 
+}.mobile{
+    display: none;
 }
 
 .boxHeader{
@@ -121,8 +123,8 @@ header p{
     .desktop {
         display: none;
     }
-    .mobile, .burger, .menuBurger {
-        visibility: visible;
+    .mobile, .burger {
+        /* visibility: visible; */
         display: block;
     }
     .burger{
@@ -136,11 +138,12 @@ header p{
         z-index: 99;
     }
     .mobile div:last-child{
-        background: rgba(255, 255, 255, 0.5);
+        background: rgba(255, 255, 255, 0.8);
     }
     .mobile input:checked ~ .menuBurger{
         /* height: auto; */
-        display: none;
+        visibility: visible;
+        /* display: none; */
         /* justify-content: flex-end;
         align-items: flex-end; */
     }
@@ -162,6 +165,7 @@ header p{
     background-size: cover;
     padding: 3em 0;
     display: flex;
+    align-items: center;
     justify-content: space-around;
     text-align: center;
 }
@@ -170,6 +174,18 @@ header p{
     margin-right: 10px;
     margin-left: 10px;
     width: 20%;
+}
+
+@media screen and (max-width: 600px){
+    .aboutus{
+        display: block;
+        height:fit-content
+    }
+    .about{
+        width: 80%;
+        margin: auto;
+        margin-top: 60px;
+    }
 }
 
 .icon{
@@ -238,18 +254,39 @@ header p{
     list-style: none;
 }
 
+@media screen and (max-width: 600px){
+    .portfolio{
+        display: block;
+    }
+    .portfolio .aside{
+        background-color: #3dc1cd;
+        /* max-width: 30%; */
+        width: 100%;
+        padding: 4%;
+        color: white;
+    }
+    .gallery{
+        width: 100%;
+        text-align: center;
+    }
+    .portfolio img{
+        width: 100%;
+    }
+}
+
 /************************************************************************************************/
 
 .present{
     background-color: #f6c45C;
-    height: 400px;
+    height: fit-content;
     padding: 10%;
 }
 
 .present .centerp{
     background-color:aliceblue;
     padding: 10px;
-    width: 50%;
+    min-width: 50%;
+    max-width: 60%;
     margin: auto;
     text-align: center;
     padding: 50px;
@@ -257,9 +294,14 @@ header p{
 .present .centerName{
     text-align: center;
     margin-top: 20px;
+    color: white;
+}
+.centerName span{
+    color: gainsboro;
 }
 
 /*************************************************************************************************/
+
 .blog{
     background-image: url(img/blog-bg.jpg);
     height: 550px;
@@ -271,6 +313,7 @@ header p{
     height: 100%;
     padding: 2%;
 }
+
 aside h3, aside hr, aside ul{
     margin-top: 20px;
     margin-bottom: 20px;
@@ -278,9 +321,12 @@ aside h3, aside hr, aside ul{
 aside ul{
     margin-top: 50px;
 }
+.blog span{
+    color: #f69536;
+}
 .blog .left{
     margin-left: 25%;
-    width: 60%;
+    width: 70%;
 }
 .blog ul li{
     background-color: whitesmoke;
@@ -292,9 +338,9 @@ aside ul{
 }
 .blog .content{
     margin-top: 2%;
-    margin-left: 2%;
+    margin-left: 2%; 
 }
-.blog .background{
+.blog .background img{
     background-image: url(img/blog_item_01.jpg);
     background-repeat: no-repeat;
     width: 80%;
@@ -310,6 +356,25 @@ aside ul{
 .blog .text h3{
     color: #3dc1cd;
 }
+@media screen and (max-width: 600px){
+    .blog{
+        height: fit-content;
+        display: block;
+    }
+    .blog aside{
+        height: 100%;
+        padding: 2%;
+    }
+    .blog .left, .blog .text{
+        margin: auto;
+    }
+    .blog .background{
+        text-align: center;
+    }
+    .blog .content{
+        padding-bottom: 20px;
+    }
+}
 
 /**************************************************************************************/
 
@@ -321,11 +386,12 @@ aside ul{
     padding-top: 5%;
 }
 .contactus div{
-    width: 30%;
+    min-width: 40%;
+    max-width: 50%;
     margin: auto;
 }
 .contactus p, .contactus h2{
-    padding: 2%;
+    padding: 4%;
 }
 
 .gmap{
@@ -334,8 +400,7 @@ aside ul{
 
 /************************************************************************************/
 
-@media screen and (max-width: 600px){
-}
+
 footer{
     background-color: #383b3c;
     width: 100%;
@@ -348,6 +413,7 @@ footer{
 
 .adresse{
     display: flex;
+    justify-content: space-around;
 }
 .adresse p:first-child{
     border-right: 2px solid #fafafa;
@@ -370,4 +436,26 @@ footer .title{
 }
 .location, .moreinfo, .getsocial{
     height: 60%;
+}
+@media screen and (max-width: 600px){
+    footer{
+        display: block;
+        height: fit-content;
+        text-align: center;
+    }
+    .allicon div{
+        margin: auto;
+        margin-bottom: 20px;
+    }
+    .social{
+        border-radius: 50%;
+        width: 70px;
+        height: 70px;
+        background-color: whitesmoke;
+        color: black;
+        font-size: 36px;
+    }
+    .logo, .location, .moreinfo, .getsocial{
+        margin-bottom: 40px;
+    }
 }
